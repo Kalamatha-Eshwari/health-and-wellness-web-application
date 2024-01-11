@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>-----</h1>
+        <h1>Health & Wellness Hub</h1>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#dashboard">User Dashboard</a>
+        <a href="#healthTips">Health Tips</a>
+        <a href="#exerciseRoutines">Exercise Routines</a>
+        <a href="#healthyRecipes">Healthy Recipes</a>
+        <a href="#meditationTips">Meditation Tips</a>
+        <a href="#youtubeLinks">Basic cures</a>
+    </nav>
+
+    <div class="content-section1" id="dashboard">
+        <h2>User Dashboard</h2>
+        <form>
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" placeholder="Enter your name" required>
+            <button type="button" onclick="updateUserName()">Update Name</button>
+        </form>
+        <p id="userNameDisplay"></p>
+    </div>
+
+    <div class="content-section2" id="healthTips">
+        <h2>Health Tips</h2>
+        <ul id="healthTipsList">
+            <li>Drink at least 8 glasses of water every day.</li>
+            <li>Eat a balanced diet with plenty of fruits and vegetables.</li>
+            <li>Get at least 30 minutes of exercise daily.</li>
+            <li>Practice good hand hygiene by washing your hands regularly.</li>
+            <li>Ensure you get enough sleep each night (7-9 hours for adults).</li>
+
+        </ul>
+        <input type="text" id="newHealthTip" placeholder="Add a health tip">
+        <button onclick="addHealthTip()">Add Tip</button>
+    </div>
+
+    <div class="content-section3" id="exerciseRoutines">
+        <h2>Exercise Routines</h2>
+        <ul id="exerciseTipsList">
+            <li>Include cardio exercises like running or cycling for at least 20 minutes.</li>
+            <li>Incorporate strength training exercises 2-3 times a week.</li>
+            <li>Stretch before and after your workout to improve flexibility.</li>
+            <li>Try different types of exercises to keep your routine interesting.</li>
+            <li>Consult with a fitness professional to create a personalized exercise plan.</li>
+
+        </ul>
+        <input type="text" id="newExerciseTip" placeholder="Add an exercise tip">
+        <button onclick="addExerciseTip()">Add Tip</button>
+    </div>
+
+    <div class="content-section4" id="healthyRecipes">
+        <h2>Healthy Recipes</h2>
+        
+        <ul id="exerciseList">
+            <li>Prioritize whole, nutrient-dense foods such as fruits, vegetables.</li>
+            <li>Control portion sizes to maintain a support weight management.</li>
+            <li>Stretch before and after your workout to improve flexibility.</li>
+            <li>Stay hydrated by drinking water throughout the day.</li>
+            <li>Limit processed foods, sugary snacks, and beverages to reduce added sugar.</li>
+        </ul>
+
+    </div>
+
+    <div class="content-section5" id="meditationTips">
+        <h2>Meditation Tips</h2>
+        <ul id="meditationTipsList">
+           
+                <li>Find a quiet and comfortable space for meditation.</li>
+                <li>Focus on your breath to anchor your attention.</li>
+                <li>Start with short sessions and gradually increase the duration.</li>
+                <li>Let go of judgment and accept thoughts without dwelling on them.</li>
+                <li>Experiment with different meditation techniques to find what suits you.</li>
+          
+            
+        </ul>
+        
+    <div class="content-section6" id="blog">
+        <h2>Blog</h2>
+        <div id="blogPosts"></div>
+        <textarea id="newBlogPost" placeholder="Share your knowledge..."></textarea>
+        <button onclick="addBlogPost()">Post</button>
+    </div>
+
+   
+    <div class="content-section7" id="youtubeLinks">
+        <h2>Basic cures for you </h2>
+      
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=uBoQJkNEx-M" target="_blank">healthy diet</a></li>
+            <li><a href="https://www.youtube.com/watch?v=wOrn7RisCWc" target="_blank">Fitness</a></li>
+            <li><a href="https://www.youtube.com/watch?v=DZbk6HhF7GE" target="_blank">meditation</a></li>
+            <li><a href="https://www.youtube.com/watch?v=E4EaRk6r_SM" target="_blank">women diet</a></li>
+</ul>
+    </div>
+  
+<section id="doctors">
+    <h2>Find Your Specialist Doctor</h2>
+    <p>Select a specialist:</p>
+    <select id="specialists" onchange="displayDoctorInfo()">
+        <option value="cardiologist">Cardiologist</option>
+        <option value="dermatologist">Dermatologist</option>
+        <option value="endocrinologist">Endocrinologist</option>
+        <option value="orthopedic">Orthopedic Surgeon</option>
+        <option value="psychiatrist">Psychiatrist</option>
+    </select>
+
+    <div id="doctorInfo">
+       
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+
+    <script>
+    
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
